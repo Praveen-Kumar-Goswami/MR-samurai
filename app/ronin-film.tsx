@@ -207,7 +207,7 @@ export function RoninFilm() {
     if (!context) return;
 
     const image = new Image();
-    image.src = "/media/image.png";
+    image.src = `${import.meta.env.BASE_URL}media/image.png`;
     const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const pointer = {
@@ -666,7 +666,7 @@ export function RoninFilm() {
           <video
             ref={videoRef}
             className="samurai-video"
-            src="/media/good.mp4"
+            src={`${import.meta.env.BASE_URL}media/good.mp4`}
             autoPlay
             muted
             loop
@@ -676,7 +676,7 @@ export function RoninFilm() {
           <img
             ref={fallbackRef}
             className="veil-fallback"
-            src="/media/image.png"
+            src={`${import.meta.env.BASE_URL}media/image.png`}
             alt=""
           />
           <canvas ref={canvasRef} className="liquid-veil" />
